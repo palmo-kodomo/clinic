@@ -1,0 +1,537 @@
+
+/* ===================================
+基本設定
+=================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:
+radial-gradient(circle at 20% 20%, rgba(255,255,255,.8) 0, rgba(255,255,255,0) 2px),
+radial-gradient(circle at 70% 60%, rgba(255,255,255,.6) 0, rgba(255,255,255,0) 1px),
+#f8fbff;
+background-size:80px 80px;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:0 auto;
+}
+
+
+/* ===================================
+ヘッダー
+=================================== */
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#fff;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+z-index:9999;
+}
+
+.header .container{
+height:60px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:1.3rem;
+font-weight:700;
+color:#4c86c6;
+}
+
+.nav{
+display:flex;
+gap:24px;
+}
+
+.nav a{
+color:#333;
+font-size:.95rem;
+}
+
+.hamburger{
+display:none;
+background:none;
+border:none;
+cursor:pointer;
+}
+
+.hamburger span{
+display:block;
+width:28px;
+height:3px;
+margin:5px 0;
+background:#4c86c6;
+border-radius:2px;
+}
+
+
+/* ===================================
+ヒーロー
+=================================== */
+
+.hero{
+position:relative;
+margin-top:60px;
+margin-bottom:0px;
+}
+
+.hero-image{
+width:100%;
+height:72vh;
+min-height:520px;
+object-fit:cover;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.28);
+}
+
+.hero-content{
+position:absolute;
+left:8%;
+bottom:12%;
+color:#fff;
+max-width:700px;
+}
+
+.hero-en{
+font-size:.9rem;
+letter-spacing:3px;
+margin-bottom:8px;
+}
+
+.hero-clinic{
+font-size:2.4rem;
+font-weight:700;
+margin-bottom:18px;
+}
+
+.hero-copy{
+font-size:1.4rem;
+line-height:1.8;
+margin-bottom:24px;
+}
+
+.btn-primary{
+display:inline-block;
+padding:14px 28px;
+background:#4c86c6;
+color:#fff;
+border-radius:999px;
+font-weight:700;
+}
+
+/* ===================================
+共通セクション
+=================================== */
+
+.section{
+padding:60px 0;
+}
+
+.bg-light{
+background:#f8fbff;
+}
+
+.section-title{
+text-align:center;
+font-size:2rem;
+color:#4c86c6;
+margin-bottom:40px;
+}
+
+.section-lead{
+text-align:center;
+max-width:800px;
+margin:0 auto 40px;
+}
+
+
+/* ===================================
+お知らせ
+=================================== */
+
+#news{
+scroll-margin-top:50px;
+}
+
+#news.section{
+padding-top:30px;
+padding-bottom:30px;
+}
+
+#news .section-title{
+margin-bottom:20px;
+}
+
+.news-box{
+max-width:800px;
+margin:0 auto;
+padding:16px 24px;
+background:#fff;
+border-radius:16px;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+text-align:left;
+line-height:1.8;
+}
+
+
+/* ===================================
+特徴
+=================================== */
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:16px;
+}
+
+.feature-item{
+background:#fff;
+border-radius:16px;
+padding:24px 12px;
+text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+font-size:1.8rem;
+}
+
+.feature-item span{
+display:block;
+margin-top:10px;
+font-size:.95rem;
+}
+
+/* ===================================
+診療内容
+=================================== */
+
+.medical-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+}
+
+.medical-grid div{
+background:#fff;
+border-radius:12px;
+padding:16px;
+text-align:center;
+}
+
+.medical-note{
+margin-top:20px;
+text-align:center;
+}
+
+/* ===================================
+院長紹介
+=================================== */
+
+.director-wrap{
+display:grid;
+grid-template-columns:320px 1fr;
+gap:50px;
+align-items:start;
+}
+
+.director-image img{
+border-radius:16px;
+}
+
+.director-text h3{
+color:#4c86c6;
+margin-bottom:20px;
+}
+
+.director-text h4{
+margin-top:24px;
+margin-bottom:12px;
+color:#4c86c6;
+}
+
+.director-text ul{
+padding-left:20px;
+}
+
+/* ===================================
+院内紹介
+=================================== */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.gallery-card{
+background:#fff;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.gallery-card img{
+width:100%;
+aspect-ratio:4/3;
+object-fit:cover;
+}
+
+.gallery-card p{
+text-align:center;
+padding:12px;
+}
+
+/* ===================================
+駐車場
+=================================== */
+
+.parking-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.parking-card img{
+border-radius:16px;
+margin-bottom:12px;
+}
+
+/* ===================================
+診療時間
+=================================== */
+
+.schedule-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.schedule-table th,
+.schedule-table td{
+border:1px solid #ddd;
+padding:14px;
+text-align:center;
+}
+
+.schedule-table th{
+background:#f5f8fc;
+}
+
+/* ===================================
+Google Map
+=================================== */
+
+.map-wrap{
+margin-top:30px;
+}
+
+.map-wrap iframe{
+width:100%;
+height:450px;
+border:none;
+border-radius:16px;
+}
+
+/* ===================================
+診療時間＋アクセス
+=================================== */
+
+.info-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:start;
+}
+
+.info-card{
+background:#fff;
+border-radius:16px;
+padding:30px;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.info-card img{
+width:100%;
+border-radius:12px;
+margin-top:20px;
+}
+
+.access-button{
+text-align:center;
+margin-top:20px;
+}
+
+/* ===================================
+フッター
+=================================== */
+
+.footer{
+background:#4c86c6;
+color:#fff;
+text-align:center;
+padding:50px 20px;
+}
+
+.sp-footer{
+display:none;
+}
+
+/* ===================================
+スマホ
+=================================== */
+
+@media(max-width:768px){
+
+.header .container{
+width:95%
+}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.feature-grid{
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.header{
+min-height:auto;
+}
+
+.nav{
+display:none;
+}
+
+.nav.active{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:72px;
+left:0;
+width:100%;
+background:#fff;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.nav.active a{
+padding:16px;
+border-bottom:1px solid #eee;
+}
+
+.hamburger{
+display:block;
+}
+
+.hero-image{
+object-position:center;
+height:50vh;
+min-height:300px;
+}
+
+.hero-content{
+left:5%;
+right:5%;
+bottom:8%;
+}
+
+.hero-clinic{
+font-size:1.8rem;
+}
+
+.hero-copy{
+font-size:1.1rem;
+}
+
+.section{
+padding:60px 0;
+}
+
+.feature-grid{
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.feature-item{
+font-size:1.3rem;
+padding:18px 6px;
+}
+
+.feature-item span{
+font-size:.8rem;
+}
+
+.medical-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.director-wrap{
+grid-template-columns:1fr;
+}
+
+.gallery-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.parking-grid{
+grid-template-columns:1fr;
+}
+
+.map-wrap iframe{
+height:300px;
+}
+
+body{
+padding-bottom:72px;
+}
+
+.sp-footer{
+display:flex;
+position:fixed;
+left:0;
+bottom:0;
+width:100%;
+z-index:9999;
+}
+
+.sp-footer a{
+flex:1;
+background:#4c86c6;
+color:#fff;
+text-align:center;
+padding:12px 4px;
+font-size:.85rem;
+border-right:1px solid rgba(255,255,255,.2);
+}
+
+.sp-footer a:last-child{
+border-right:none;
+}
+}
