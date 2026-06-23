@@ -416,9 +416,28 @@ text-align:center;
 padding:50px 20px;
 }
 
+/* PCでは非表示 */
+
 .sp-footer{
 display:none;
 }
+
+/* スマホだけ表示 */
+
+@media(max-width:768px){
+
+.sp-footer{
+display:flex;
+position:fixes;
+left:0;
+width:100%;
+height72px;
+background:"6f95cf;
+z-index:9999;
+}
+
+}
+
 
 /* ===================================
 スマホ
@@ -443,7 +462,6 @@ flex-direction:column;
 justify-content:flex-start;
 position:absolute;
 top:100%;
-margin-bottom:10px;
 left:0;
 width:100%;
 background:#fff;
