@@ -571,24 +571,15 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
-.info-card{
-width:100%;
-box-sizing:border-box;
-}
-
 .schedule-table{
-font-size:.85rem;
+width:100%;
+table-layout:fixed;
 }
 
 .schedule-table th,
 .schedule-table td{
+font-size:.85rem;
 padding:6px 4px;
-}
-
-.info-card img{
-width:100%;
-height:auto;
-display:block;
 }
 
 .map-wrap iframe{
@@ -625,10 +616,6 @@ text-decoration:none;
 border-right:1px solid rgba(255,255,255,.2);
 }
 
-.sp-footer a:last-child{
-border-right:none;
-}
-
 .sp-footer i{
 font-size:1.2rem;
 color:#fff !important;
@@ -641,4 +628,5 @@ color:#fff !important;
 
 .sp-footer a:last-child{
 border-right:none;
+}
 }
