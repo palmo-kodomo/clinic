@@ -619,4 +619,17 @@ color:#fff !important;
 .sp-footer a:last-child{
 border-right:none;
 }
+
+.info-grid,
+.info-card,
+.schedule-table,
+.info-card img{
+max-width:100%;
 }
+
+.info-card img{
+width:100%;
+height:auto;
+display:block;
+}
+
