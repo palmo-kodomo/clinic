@@ -56,6 +56,7 @@ height:60px;
 display:flex;
 align-items:center;
 justify-content:space-between;
+gap:30px
 }
 
 .logo{
@@ -66,7 +67,8 @@ color:#4c86c6;
 
 .nav{
 display:flex;
-gap:24px;
+gap:16px;
+margin-left:30px
 }
 
 .nav a{
@@ -90,6 +92,9 @@ background:#4c86c6;
 border-radius:2px;
 }
 
+.nav i{
+display:none;
+}
 
 /* ===================================
 ヒーロー
@@ -138,6 +143,13 @@ margin-bottom:18px;
 font-size:1.4rem;
 line-height:1.8;
 margin-bottom:24px;
+}
+
+.hero-reserve-note{
+margin-top:12px;
+font-size:.9rem;
+color:#fff;
+text-shadow:0 1px 3px rgba(0,0,0,.3);
 }
 
 .btn-primary{
@@ -407,23 +419,13 @@ display:none;
 スマホ
 =================================== */
 
-@media(max-width:768px){
+
+@media (max-width:768px){
+
+/* ヘッダー */
 
 .header .container{
-width:95%
-}
-
-.info-grid{
-grid-template-columns:1fr;
-}
-
-.feature-grid{
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-}
-
-.header{
-min-height:auto;
+width:95%;
 }
 
 .nav{
@@ -442,13 +444,41 @@ box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
 
 .nav.active a{
-padding:16px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 24px;
 border-bottom:1px solid #eee;
+font-size:1rem;
+}
+
+.nav.active a::after{
+content:"›";
+color:#4c86c6;
+font-size:1.2rem;
+font-weight:bold;
+}
+
+.nav.active a small{
+display:block;
+font-size:.8rem;
+color:#4c86c6;
+margin-top:2px;
+}
+
+.nav i{
+display:inline-block;
+width:24px;
+margin-right:10px;
+color:#4c86c6;
+text-align:center;
 }
 
 .hamburger{
 display:block;
 }
+
+/* トップ画像 */
 
 .hero-image{
 object-position:center;
@@ -470,9 +500,13 @@ font-size:1.8rem;
 font-size:1.1rem;
 }
 
+/* セクション */
+
 .section{
 padding:60px 0;
 }
+
+/* 特徴 */
 
 .feature-grid{
 grid-template-columns:repeat(3,1fr);
@@ -488,25 +522,41 @@ padding:18px 6px;
 font-size:.8rem;
 }
 
+/* 診療内容 */
+
 .medical-grid{
 grid-template-columns:1fr 1fr;
 }
+
+/* 院長紹介 */
 
 .director-wrap{
 grid-template-columns:1fr;
 }
 
+/* 院内紹介 */
+
 .gallery-grid{
 grid-template-columns:1fr 1fr;
 }
 
+/* 駐車場 */
+
 .parking-grid{
+grid-template-columns:1fr;
+}
+
+/* 診療時間・アクセス */
+
+.info-grid{
 grid-template-columns:1fr;
 }
 
 .map-wrap iframe{
 height:300px;
 }
+
+/* 固定フッター */
 
 body{
 padding-bottom:72px;
@@ -523,15 +573,23 @@ z-index:9999;
 
 .sp-footer a{
 flex:1;
-background:#4c86c6;
-color:#fff;
-text-align:center;
-padding:12px 4px;
-font-size:.85rem;
-border-right:1px solid rgba(255,255,255,.2);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:4px;
+}
+
+.sp-footer i{
+font-size:1.2rem;
+}
+
+.sp-footer span{
+font-size:.8rem;
 }
 
 .sp-footer a:last-child{
 border-right:none;
 }
+
 }
