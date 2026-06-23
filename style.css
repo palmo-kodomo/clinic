@@ -446,24 +446,16 @@ box-shadow:0 4px 10px rgba(0,0,0,.1);
 .nav.active a{
 display:flex;
 align-items:center;
-justify-content:space-between;
-padding:20px 24px;
+padding:12px 20px;
 border-bottom:1px solid #eee;
 font-size:1rem;
 }
 
-.nav.active a::after{
-content:"›";
-color:#4c86c6;
-font-size:1.2rem;
-font-weight:bold;
-}
-
 .nav.active a small{
 display:block;
-font-size:.8rem;
+font-size:.75rem;
 color:#4c86c6;
-margin-top:2px;
+margin-top:0;
 }
 
 .nav i{
