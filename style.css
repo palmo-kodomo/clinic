@@ -36,6 +36,11 @@ max-width:1200px;
 margin:0 auto;
 }
 
+html,
+body{
+overflow-x:hidden;
+}
+
 
 /* ===================================
 ヘッダー
@@ -435,8 +440,10 @@ display:none;
 .nav.active{
 display:flex;
 flex-direction:column;
+justify-content:flex-start;
 position:absolute;
-top:72px;
+top:100%;
+margin-bottom:10px;
 left:0;
 width:100%;
 background:#fff;
@@ -517,7 +524,7 @@ font-size:.8rem;
 /* 診療内容 */
 
 .medical-grid{
-grid-template-columns:1fr 1fr;
+grid-template-columns:1fr;
 }
 
 /* 院長紹介 */
