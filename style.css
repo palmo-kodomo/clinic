@@ -590,6 +590,11 @@ white-space:nowrap;
 height:300px;
 }
 
+.access-button .btn-primary{
+padding:10px 20px;
+font-size:.9rem;
+}
+
 
 /* 固定フッター */
 
