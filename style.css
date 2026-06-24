@@ -638,8 +638,6 @@ color:#fff !important;
 border-right:none;
 }
 
-
-
 .gallery-img{
 cursor:pointer;
 transition:.3s;
@@ -664,9 +662,4 @@ padding:20px;
 max-width:90%;
 max-height:90%;
 border-radius:12px;
-}
-
-.lightbox.active{
-display:flex;
-}
 }
