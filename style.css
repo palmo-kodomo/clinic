@@ -581,6 +581,11 @@ font-size:.85rem;
 padding:6px 4px;
 }
 
+.schedule-table td:first-child{
+width:95px;
+white-space:nowrap;
+}
+
 .map-wrap iframe{
 height:300px;
 }
