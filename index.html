@@ -714,26 +714,49 @@ box-shadow:0 10px 30px rgba(0,0,0,.4);">
 
 <script>
 
+/* ハンバーガーメニュー */
+
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+
+if(hamburger && nav){
+
+hamburger.addEventListener('click', () => {
+nav.classList.toggle('active');
+hamburger.classList.toggle('active');
+});
+
+document.querySelectorAll('#nav a').forEach(link => {
+link.addEventListener('click', () => {
+nav.classList.remove('active');
+hamburger.classList.remove('active');
+});
+});
+
+}
+
+
+/* 院内紹介 Lightbox */
+
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
 document.querySelectorAll('.gallery-img').forEach(img => {
 
-img.onclick = function(){
+img.addEventListener('click', () => {
 
-lightboxImg.src = this.src;
-
+lightboxImg.src = img.src;
 lightbox.style.display = 'flex';
-
-};
 
 });
 
-lightbox.onclick = function(){
+});
+
+lightbox.addEventListener('click', () => {
 
 lightbox.style.display = 'none';
 
-};
+});
 
 </script>
 
