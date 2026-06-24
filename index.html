@@ -368,42 +368,42 @@ alt="院長 三田智子">
 <div class="gallery-grid">
 
 <div class="gallery-card">
-<img src="pic/entrance.jpg" alt="入口">
+<img src="pic/entrance.jpg" alt="入口" class="gallery-img">
 <p>入口</p>
 </div>
 
 <div class="gallery-card">
-<img src="pic/kids-space.jpg" alt="キッズスペース">
+<img src="pic/kids-space.jpg" alt="キッズスペース" class="gallery-img">
 <p>キッズスペース</p>
 </div>
 
 <div class="gallery-card">
-<img src="pic/waiting-room.jpg" alt="待合室">
+<img src="pic/waiting-room.jpg" alt="待合室" class="gallery-img">
 <p>待合室</p>
 </div>
 
 <div class="gallery-card">
-<img src="pic/exam-room.jpg" alt="診察室">
+<img src="pic/exam-room.jpg" alt="診察室" class="gallery-img">
 <p>診察室</p>
 </div>
 
 <div class="gallery-card">
-<img src="pic/treatment-room.jpg" alt="処置室">
+<img src="pic/treatment-room.jpg" alt="処置室" class="gallery-img">
 <p>処置室</p>
 </div>
 
 <div class="gallery-card">
-<img src="pic/isolation-room.jpg" alt="隔離室">
+<img src="pic/isolation-room.jpg" alt="隔離室" class="gallery-img">
 <p>隔離室</p>
 </div>
 
 <div class="gallery-card">
-<img src="pic/reception.jpg" alt="受付">
+<img src="pic/reception.jpg" alt="受付" class="gallery-img">
 <p>受付</p>
 </div>
 
 <div class="gallery-card">
-<img src="pic/gift.jpg" alt="患者(お子さま)からの贈り物">
+<img src="pic/gift.jpg" alt="患者(お子さま)からの贈り物" class="gallery-img">
 <p>患者(お子さま)からの贈り物</p>
 </div>
 
@@ -710,8 +710,26 @@ hamburger.classList.remove('active');
 });
 });
 
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+document.querySelectorAll('.gallery-img').forEach(img => {
+img.addEventListener('click', () => {
+lightboxImg.src = img.src;
+lightbox.classList.add('active');
+});
+});
+
+lightbox.addEventListener('click', () => {
+lightbox.classList.remove('active');
+});
+
+
 </script>
 
+<div class="lightbox" id="lightbox">
+<imag src="" alt="">
+</div>
 
 </body>
 </html>

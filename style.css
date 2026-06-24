@@ -637,4 +637,36 @@ color:#fff !important;
 .sp-footer a:last-child{
 border-right:none;
 }
+
+
+
+.gallery-img{
+cursor:pointer;
+transition:.3s;
+}
+
+.gallery-img:hover{
+opacity:.9;
+}
+
+.lightbox{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.85);
+z-index:99999;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:12px;
+}
+
+.lightbox.active{
+display:flex;
+}
 }
