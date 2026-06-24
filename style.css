@@ -572,7 +572,6 @@ grid-template-columns:1fr;
 
 .schedule-table{
 width:100%;
-table-layout:fixed;
 }
 
 .schedule-table th,
@@ -582,17 +581,17 @@ padding:6px 4px;
 }
 
 .schedule-table td:first-child{
-width:95px;
 white-space:nowrap;
+}
+
+.info-card img{
+width:100%;
+height:auto;
+display:block;
 }
 
 .map-wrap iframe{
 height:300px;
-}
-
-.access-button .btn-primary{
-padding:10px 20px;
-font-size:.9rem;
 }
 
 
