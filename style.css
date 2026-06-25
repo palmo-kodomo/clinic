@@ -84,7 +84,7 @@ font-size:.95rem;
 
 
 .hamburger{
-display:block;
+display:none;
 background:none;
 border:none;
 width:32px;
@@ -576,7 +576,8 @@ font-size:.8rem;
 /* 診療内容 */
 
 .medical-grid{
-grid-template-columns:repeat(2,1fr);
+display:grid;
+grid-template-columns:repeat(2,1fr) !important;
 gap:12px;
 }
 
