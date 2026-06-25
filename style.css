@@ -82,30 +82,43 @@ font-size:.95rem;
 }
 
 
+
 .hamburger{
 display:block;
 background:none;
 border:none;
-font-size:1.8rem;
-cursor:pointer;
-position:relative;
 width:32px;
 height:32px;
+position:relative;
+cursor:pointer;
+padding:0;
 }
 
 .hamburger span{
-display:block;
+position:absolute;
+left:2px;
 width:28px;
 height:3px;
 background:#4c86c6;
-margin:6px auto;
+border-radius:3px;
 transition:.3s;
 }
 
-/* 開いたとき */
+.hamburger span:nth-child(1){
+top:6px;
+}
+
+.hamburger span:nth-child(2){
+top:14px;
+}
+
+.hamburger span:nth-child(3){
+top:22px;
+}
 
 .hamburger.active span:nth-child(1){
-transform:translateY(9px) rotate(45deg);
+top:14px;
+transform:rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2){
@@ -113,7 +126,8 @@ opacity:0;
 }
 
 .hamburger.active span:nth-child(3){
-transform:translateY(-9px) rotate(-45deg);
+top:14px;
+transform:rotate(-45deg);
 }
 
 .nav i{
