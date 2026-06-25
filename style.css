@@ -576,8 +576,15 @@ font-size:.8rem;
 /* 診療内容 */
 
 .medical-grid{
-grid-template-columns:1fr;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
 }
+
+.medical-item{
+padding:18px 8px;
+font-size:1rem;
+}
+
 
 /* 院長紹介 */
 
