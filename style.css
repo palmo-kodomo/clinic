@@ -14,9 +14,13 @@ scroll-behavior:smooth;
 }
 
 body{
+font-family:"Noto Sans JP", sans-serif;
+
 background:
-radial-gradient(circle at 20% 20%, rgba(255,255,255,.8) 0, rgba(255,255,255,0) 2px),
-radial-gradient(circle at 70% 60%, rgba(255,255,255,.6) 0, rgba(255,255,255,0) 1px),
+radial-gradient(circle at 20% 20%, rgba(255,255,255,.8) 0,
+rgba(255,255,255,0) 2px),
+radial-gradient(circle at 70% 60%, rgba(255,255,255,.6) 0,
+rgba(255,255,255,0) 1px),
 #f8fbff;
 background-size:80px 80px;
 }
@@ -76,7 +80,7 @@ text-decoration:none;
 width:26px;
 height:26px;
 object-fit:contain;
-margin-top:2.5px;
+margin-top:3.5px;
 flex-shrink:0;
 }
 
@@ -94,6 +98,7 @@ margin-left:30px
 }
 
 .nav a{
+font-family:"Noto Sans JP",sans-serif;
 color:#333;
 font-size:.95rem;
 }
@@ -213,6 +218,15 @@ color:#fff;
 border-radius:999px;
 font-weight:700;
 }
+
+.hero-en,
+.hero-clinic,
+.hero-copy,
+.hero-reserve-note,
+.btn-primary{
+font-family:"Zen Old Mincho",serif;
+}
+
 
 
 /* ===================================
