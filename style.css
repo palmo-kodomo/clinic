@@ -490,6 +490,7 @@ transform:scale(1.01);
 margin:28px 0 24px;
 border:none;
 border-top:1px solid #e6edf5;
+margin:24px 0 20px;
 }
 
 .calendar-title{
@@ -502,9 +503,10 @@ font-family:'Zen Old Mincho',serif;
 
 .calendar-thumbnail{
 display:block;
-width:55%;
-max-width:260px;
-margin:0 auto;
+width:30%;
+min-width:170px;
+max-width:200px;
+margin:15px auto;
 border-radius:16px;
 box-shadow:0 4px 12px rgba(0,0,0,.10);
 cursor:pointer;
