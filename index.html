@@ -499,10 +499,13 @@ alt="臨時駐車場">
 
 <div class="container">
 
+
 <div class="info-grid">
 
-<!-- 診療時間 -->
+<!-- 左側 -->
+<div class="info-left">
 
+<!-- 診療時間 -->
 <div class="info-card">
 
 <h2 class="section-title">
@@ -547,10 +550,26 @@ alt="臨時駐車場">
 休診日：土曜午後・日曜・祝日
 </p>
 
+<hr class="calendar-divider">
+
+<h3 class="calendar-title">
+今月の診療カレンダー
+</h3>
+
+<img
+src="pic/calendar.png"
+alt="診療カレンダー"
+class="calendar-thumbnail">
+
+<p class="calendar-note">
+画像をクリックすると拡大表示されます
+</p>
+
 </div>
 
-<!-- アクセス -->
+</div>
 
+<!-- 右側 -->
 <div class="info-card">
 
 <h2 class="section-title">
@@ -584,8 +603,6 @@ class="btn-primary">
 Googleマップで見る
 
 </a>
-
-</div>
 
 </div>
 
@@ -755,7 +772,7 @@ hamburger.classList.remove('active');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
-document.querySelectorAll('.gallery-img').forEach(img => {
+document.querySelectorAll('.gallery-img, .calendar-thumbnail').forEach(img => {
 
 img.addEventListener('click', () => {
 
