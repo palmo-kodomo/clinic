@@ -82,6 +82,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 WEB予約
 </a>
 
+<a href="https://lin.ee/O5BUDiG"
+class="line-btn"
+target="_blank"
+aria-label="LINE">
+
+<img src="pic/line.png" alt="LINE">
+
+</a>
+
 </nav>
 
 </div>
@@ -143,14 +152,6 @@ WEB予約はこちら
 </div>
 
 </section>
-
-
-<!-- =========================
-TOP
-========================= -->
-
-<header id="top" class="hero">
-
 
 <!-- =========================
 お知らせ
@@ -398,7 +399,6 @@ alt="院長 三田智子">
 
 <div class="gallery-card">
 <img src="pic/entrance.jpg" alt="入口" class="gallery-img">
-</a>
 <p>入口</p>
 </div>
 
@@ -571,10 +571,14 @@ alt="臨時駐車場">
 診療カレンダー
 </h3>
 
+<a href="pic/calendar.png" class="calendar-link">
+
 <img
 src="pic/calendar.png"
 alt="診療カレンダー"
 class="calendar-thumbnail">
+
+</a>
 
 <p class="calendar-note">
 画像をクリックすると拡大表示されます
@@ -745,96 +749,13 @@ TEL 054-246-0400
 
 </div>
 
-
-<div id="lightbox"
-style="
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100vw;
-height:100vh;
-background:rgba(0,0,0,.9);
-z-index:99999;
-justify-content:center;
-align-items:center;">
-
-<img id="lightbox-img"
-style="
-max-width:90%;
-max-height:90%;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,.4);">
+<div id="lightbox" class="lightbox">
+<img id="lightbox-img">
 </div>
 
 <div class="nav-overlay"></div>
-<script>
 
-/* ハンバーガーメニュー */
-
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
-
-if(hamburger && nav){
-
-hamburger.addEventListener("click", () => {
-
-hamburger.classList.toggle("active");
-nav.classList.toggle("active");
-overlay.classList.toggle("active");
-if (nav.classList.contains("active")) {
-document.body.style.overflow = "hidden";
-} else {
-document.body.style.overflow = "";
-}
-});
-
-overlay.addEventListener("click", () => {
-hamburger.classList.remove("active");
-nav.classList.remove("active");
-overlay.classList.remove("active");
-document.body.style.overflow = "";
-});
-
-document.querySelectorAll('#nav a').forEach(link => {
-link.addEventListener('click', () => {
-nav.classList.remove('active');
-hamburger.classList.remove('active');
-});
-});
-
-}
-
-
-/* 院内紹介 Lightbox */
-
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-document.querySelectorAll('.gallery-img, .calendar-thumbnail').forEach(img => {
-img.addEventListener('click', () => {
-lightboxImg.src = img.src;
-lightbox.style.display = 'flex';
-});
-});
-
-
-lightbox.addEventListener('click', () => {
-lightbox.style.display = 'none';
-});
-
-
-const backToTop = document.getElementById("backToTop");
-window.addEventListener("scroll",()=>{
-if(window.scrollY>400){
-backToTop.classList.add("show");
-}else{
-backToTop.classList.remove("show");
-}
-});
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
-
-
