@@ -23,12 +23,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </head>
 
+
+<body>
+
 <a href="#" class="back-to-top" id="backToTop">
 <i class="fa-solid fa-angles-up"></i>
 <span>TOP</span>
 </a>
-
-<body>
 
 <header class="header">
 
@@ -40,12 +41,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <span>パルモこども診療所</span>
 
 </a>
-
-<button class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</button>
 
 <nav class="nav" id="nav">
 
@@ -73,14 +68,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <i class="fa-solid fa-car"></i> 駐車場
 </a>
 
-<a href="#access">
-<i class="fa-solid fa-location-dot"></i> 診療時間/アクセス
-</a>
-
 <a href="https://medicalpass.jp/hospitals/palmo">
 <i class="fa-regular fa-calendar-check"></i>
 WEB予約
 </a>
+
+</nav>
 
 <a href="https://lin.ee/O5BUDiG"
 class="line-btn"
@@ -91,12 +84,15 @@ aria-label="LINE">
 
 </a>
 
-</nav>
+<button class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</button>
 
 </div>
 
 </header>
-
 
 <section class="hero">
 
@@ -510,18 +506,15 @@ alt="臨時駐車場">
 診療時間・アクセス
 ========================= -->
 
+
 <section id="access" class="section bg-light">
 
 <div class="container">
 
-
 <div class="info-grid">
 
-<!-- 左側 -->
-<div class="info-left">
-
-<!-- 診療時間 -->
-<div class="info-card">
+<!-- 左カード -->
+<div class="info-card info-left">
 
 <h2 class="section-title">
 診療時間
@@ -586,10 +579,8 @@ class="calendar-thumbnail">
 
 </div>
 
-</div>
-
-<!-- 右側 -->
-<div class="info-card">
+<!-- 右カード -->
+<div class="info-card info-right">
 
 <h2 class="section-title">
 アクセス
@@ -610,7 +601,8 @@ TEL：054-246-0400
 
 <img
 src="pic/access-map.jpg"
-alt="アクセスマップ">
+alt="アクセスマップ"
+class="access-map">
 
 <div class="access-button">
 
@@ -629,8 +621,9 @@ Googleマップで見る
 
 </div>
 
-</section>
+</div>
 
+</section>
 
 <!-- =========================
 施設基準

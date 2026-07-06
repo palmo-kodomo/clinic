@@ -77,7 +77,7 @@ setTimeout(()=>{
 lightbox.classList.remove("show");
 lightboxImg.src="";
 document.body.style.overflow="";
-},100);
+},80);
 }
 
 /* ===================================

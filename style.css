@@ -50,161 +50,112 @@ Header
 =================================== */
 
 .header{
-
 position:fixed;
 top:0;
 left:0;
-
 width:100%;
-
 z-index:9999;
-
 background:rgba(255,255,255,.92);
-
 backdrop-filter:blur(16px);
 -webkit-backdrop-filter:blur(16px);
-
 box-shadow:0 2px 10px rgba(0,0,0,.06);
-
 }
 
 .header .container{
-
 height:60px;
-
 display:flex;
 align-items:center;
 justify-content:space-between;
-
 gap:24px;
-
 }
 
 .logo{
-
 display:flex;
 align-items:center;
-
 gap:10px;
-
 color:#4c86c6;
-
 transition:.25s;
-
 }
 
 .logo:hover{
-
 opacity:.85;
-
 }
 
 .logo img{
-
 width:28px;
 height:28px;
-
 }
 
 .logo span{
-
 font-family:"Zen Old Mincho",serif;
-
 font-size:1.45rem;
-
 font-weight:700;
-
 color:#4c86c6;
-
 line-height:1;
-
 }
-
 
 /* ===================================
 PC Navigation
 =================================== */
 
 .nav{
-
 display:flex;
 align-items:center;
-
 gap:26px;
-
 margin-left:auto;
-
+width:74%
+max-width:300px
 }
 
 .nav a{
-
 position:relative;
-
 display:flex;
 align-items:center;
-
 height:60px;
-
 font-family:"LINE Seed JP","Noto Sans JP",sans-serif;
-
 font-size:.95rem;
 font-weight:500;
 letter-spacing:.03em;
-
 color:#333;
-
 transition:
 color .25s,
 transform .25s;
-
+justify-content:flex-start;
 }
 
 .nav a:hover{
-
 color:#4c86c6;
 
 }
 
 .nav a::after{
-
 content:"";
-
 position:absolute;
-
 left:50%;
 bottom:12px;
-
 width:0;
 height:2px;
-
 background:#4c86c6;
-
 border-radius:99px;
-
 transform:translateX(-50%);
-
 transition:width .25s;
-
 }
 
 .nav a:hover::after{
-
 width:100%;
-
 }
 
 .nav i{
-
 display:none;
-
 }
 
 /* ===================================
 LINE Button
 =================================== */
+
 .line-btn{
-width:42px;
-height:42px;
+width:36px;
+height:36px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -212,16 +163,25 @@ flex-shrink:0;
 }
 
 .line-btn img{
-width:42px;
-height:42px;
+width:36px;
+height:36px;
 display:block;
 border-radius:0;
 box-shadow:none;
-transition:transform .25s ease;
+transition:none;
+}
+
+.line-btn::after{
+display:none !important;
+}
+
+.line-btn:hover{
+transform:none !important;
+color:inherit !important;
 }
 
 .line-btn:hover img{
-transform:scale(1.08);
+transform:none;
 }
 
 /* ===================================
@@ -229,74 +189,48 @@ Hamburger
 =================================== */
 
 .hamburger{
-
 display:none;
-
 width:34px;
 height:34px;
-
 border:none;
 background:none;
-
 cursor:pointer;
-
 position:relative;
-
 }
 
 .hamburger span{
-
 position:absolute;
-
 left:3px;
-
 width:28px;
 height:3px;
-
 border-radius:99px;
-
 background:#4c86c6;
-
 transition:.3s;
-
 }
 
 .hamburger span:nth-child(1){
-
 top:7px;
-
 }
 
 .hamburger span:nth-child(2){
-
 top:15px;
-
 }
 
 .hamburger span:nth-child(3){
-
 top:23px;
-
 }
 
 .hamburger.active span:nth-child(1){
-
 top:15px;
-
 transform:rotate(45deg);
-
 }
 
 .hamburger.active span:nth-child(2){
-
 opacity:0;
-
 }
 
 .hamburger.active span:nth-child(3){
-
 top:15px;
-
 transform:rotate(-45deg);
 
 }
@@ -307,88 +241,58 @@ Back To Top
 =================================== */
 
 .back-to-top{
-
 position:fixed;
-
 right:28px;
 bottom:28px;
-
 width:58px;
 height:58px;
-
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-
 gap:2px;
-
 border-radius:50%;
-
 background:rgba(255,255,255,.92);
-
 backdrop-filter:blur(12px);
 -webkit-backdrop-filter:blur(12px);
-
 border:1px solid rgba(76,134,198,.15);
-
 box-shadow:
 0 8px 24px rgba(0,0,0,.12);
-
 color:#4c86c6;
-
 opacity:0;
 visibility:hidden;
-
 transform:translateY(10px);
-
 transition:
 opacity .3s,
 transform .3s,
 background .25s,
 color .25s;
-
 z-index:999;
-
 }
 
 .back-to-top.show{
-
 opacity:1;
 visibility:visible;
 transform:translateY(0);
-
 }
 
 .back-to-top:hover{
-
 background:#4c86c6;
-
 color:#fff;
-
 transform:translateY(-3px);
-
 box-shadow:
 0 14px 32px rgba(76,134,198,.35);
-
 }
 
 .back-to-top i{
-
 font-size:.95rem;
-
 }
 
 .back-to-top span{
-
 font-family:"LINE Seed JP","Noto Sans JP",sans-serif;
-
 font-size:.65rem;
-
 font-weight:600;
-
 letter-spacing:.08em;
-
 }
 
 /* ===================================
@@ -396,107 +300,63 @@ Hero
 =================================== */
 
 .hero{
-
 position:relative;
-
 margin-top:60px;
-
 overflow:hidden;
-
 }
 
 .hero-image{
-
 width:100%;
-
 height:72vh;
-
 min-height:520px;
-
 object-fit:cover;
-
 }
 
 .hero-overlay{
-
 position:absolute;
-
 inset:0;
-
 background:linear-gradient(
-
 rgba(0,0,0,.18),
-
 rgba(0,0,0,.35)
-
 );
-
 }
 
 .hero-content{
-
 position:absolute;
-
 left:8%;
-
 bottom:12%;
-
 max-width:700px;
-
 color:#fff;
-
 }
 
 .hero-en{
-
 font-family:"Zen Old Mincho",serif;
-
 font-size:.9rem;
-
 letter-spacing:3px;
-
 margin-bottom:10px;
-
 opacity:.95;
-
 }
 
 .hero-clinic{
-
 font-family:"Zen Old Mincho",serif;
-
 font-size:2.45rem;
-
 font-weight:700;
-
 margin-bottom:18px;
-
 line-height:1.35;
-
 }
 
 .hero-copy{
-
 font-family:"Zen Old Mincho",serif;
-
 font-size:1.35rem;
-
 line-height:1.85;
-
 margin-bottom:28px;
-
 }
 
 .hero-reserve-note{
-
 margin-top:12px;
-
 font-size:.88rem;
-
 color:#fff;
-
 text-shadow:0 1px 3px rgba(0,0,0,.35);
-
 }
 
 /* ===================================
@@ -504,62 +364,41 @@ Primary Button
 =================================== */
 
 .btn-primary{
-
 display:inline-flex;
-
 align-items:center;
-
 gap:10px;
-
 padding:10px 28px;
-
 min-width:180px;
-
 justify-content:center;
-
 font-family:"Zen Old Mincho",serif;
-
 font-size:1.05rem;
-
 font-weight:400;
-
 color:#fff;
-
 border-radius:14px;
-
 background:
 linear-gradient(
 180deg,
 rgba(126,179,242,.88),
 rgba(76,134,198,.88)
 );
-
 border:1px solid rgba(255,255,255,.30);
-
 backdrop-filter:blur(8px);
 -webkit-backdrop-filter:blur(8px);
-
 box-shadow:
 0 8px 18px rgba(76,134,198,.20),
 inset 0 1px 1px rgba(255,255,255,.35);
-
 transition:
 transform .25s,
 box-shadow .25s,
 background .25s;
-
 }
 
 .btn-primary:hover{
-
 transform:translateY(-2px);
-
 color:#fff;
-
 box-shadow:
 0 14px 28px rgba(76,134,198,.35),
 inset 0 1px 1px rgba(255,255,255,.35);
-
 }
 
 
@@ -571,50 +410,33 @@ Arrow Circle
 
 width:34px;
 height:34px;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 margin-left:6px;
-
 border-radius:50%;
-
 background:rgba(255,255,255,.18);
-
 border:1px solid rgba(255,255,255,.45);
-
 backdrop-filter:blur(6px);
 -webkit-backdrop-filter:blur(6px);
-
 transition:
 transform .25s,
 background .25s;
-
 }
 
 .arrow-circle i{
-
 color:#fff;
-
 font-size:.75rem;
-
 transition:transform .25s;
-
 }
 
 .btn-primary:hover .arrow-circle{
-
 transform:translateX(3px);
-
 background:rgba(255,255,255,.26);
-
 }
 
 .btn-primary:hover .arrow-circle i{
-
 transform:translateX(1px);
-
 }
 
 /* ===================================
@@ -622,25 +444,17 @@ Hero Buttons
 =================================== */
 
 .hero-buttons{
-
 display:flex;
-
 flex-direction:column;
-
 align-items:flex-start;
-
 }
 
 .hero-buttons .btn-primary{
-
 margin-bottom:8px;
-
 }
 
 .hero-reserve-note{
-
 padding-left:4px;
-
 }
 
 /* ===================================
@@ -650,23 +464,15 @@ Header Animation
 .logo,
 .nav a,
 .line-btn{
-
-transition:
-
-.25s ease;
-
+transition:.25s ease;
 }
 
 .logo:hover{
-
 transform:translateY(-1px);
-
 }
 
 .nav a:hover{
-
 transform:translateY(-1px);
-
 }
 
 /* ===================================
@@ -674,13 +480,9 @@ Desktop Only
 =================================== */
 
 @media (min-width:769px){
-
 .hamburger{
-
 display:none;
-
 }
-
 }
 
 /* ===================================
@@ -688,62 +490,39 @@ Mobile Hidden
 =================================== */
 
 @media (max-width:768px){
-
 .back-to-top{
-
 display:none;
-
 }
-
 }
-
 
 /* ===================================
 Common Section
 =================================== */
 
 .section{
-
 padding:80px 0;
-
 }
 
 .bg-light{
-
 background:#f8fbff;
-
 }
 
 .section-title{
-
 font-family:"Zen Old Mincho",serif;
-
 font-size:2rem;
-
 font-weight:700;
-
 color:#4c86c6;
-
 text-align:center;
-
 margin-bottom:18px;
-
 line-height:1.4;
-
 }
 
 .section-lead{
-
 max-width:760px;
-
 margin:0 auto 42px;
-
 text-align:center;
-
 color:#666;
-
 line-height:1.9;
-
 }
 
 /* ===================================
@@ -751,48 +530,31 @@ News
 =================================== */
 
 #news{
-
 scroll-margin-top:80px;
-
 }
 
 .news-box{
-
 background:#fff;
-
 border-radius:20px;
-
 padding:30px;
-
 box-shadow:
 0 8px 24px rgba(0,0,0,.05);
-
 }
 
 .news-item{
-
 line-height:2;
-
 }
 
 .news-item + .news-item{
-
 margin-top:24px;
-
 padding-top:24px;
-
 border-top:1px solid #edf2f7;
-
 }
 
 .news-item h3{
-
 color:#4c86c6;
-
 font-size:1.15rem;
-
 margin-bottom:12px;
-
 }
 
 /* ===================================
@@ -800,59 +562,38 @@ Feature
 =================================== */
 
 .feature-grid{
-
 display:grid;
-
 grid-template-columns:repeat(6,1fr);
-
 gap:18px;
-
 }
 
 .feature-item{
-
 background:#fff;
-
 border-radius:18px;
-
 padding:26px 12px;
-
 text-align:center;
-
 box-shadow:
 0 6px 18px rgba(0,0,0,.05);
-
 transition:
 transform .25s,
 box-shadow .25s;
-
 }
 
 .feature-item:hover{
-
 transform:translateY(-4px);
-
 box-shadow:
 0 12px 28px rgba(0,0,0,.08);
-
 }
 
 .feature-item{
-
 font-size:1.8rem;
-
 }
 
 .feature-item span{
-
 display:block;
-
 margin-top:12px;
-
 font-size:.95rem;
-
 color:#444;
-
 }
 
 /* ===================================
@@ -860,47 +601,30 @@ Medical
 =================================== */
 
 .medical-grid{
-
 display:grid;
-
 grid-template-columns:repeat(3,1fr);
-
 gap:16px;
-
 }
 
 .medical-grid div{
-
 background:#fff;
-
 border-radius:16px;
-
 padding:18px;
-
 text-align:center;
-
 box-shadow:
 0 4px 12px rgba(0,0,0,.04);
-
 transition:
 transform .25s;
-
 }
 
 .medical-grid div:hover{
-
 transform:translateY(-3px);
-
 }
 
 .medical-note{
-
 margin-top:24px;
-
 text-align:center;
-
 color:#666;
-
 }
 
 /* ===================================
@@ -908,60 +632,39 @@ Director
 =================================== */
 
 .director-wrap{
-
 display:grid;
-
 grid-template-columns:320px 1fr;
-
 gap:56px;
-
 align-items:start;
-
 }
 
 .director-image img{
-
 border-radius:18px;
-
 box-shadow:
 0 8px 24px rgba(0,0,0,.08);
-
 }
 
 .director-text{
-
 line-height:2;
-
 }
 
 .director-text h3{
-
 color:#4c86c6;
-
 margin-bottom:18px;
-
 }
 
 .director-text h4{
-
 color:#4c86c6;
-
 margin-top:28px;
-
 margin-bottom:10px;
-
 }
 
 .director-text ul{
-
 padding-left:22px;
-
 }
 
 .director-text li{
-
 margin-bottom:6px;
-
 }
 
 /* ===================================
@@ -969,61 +672,39 @@ Gallery
 =================================== */
 
 .gallery-grid{
-
 display:grid;
-
 grid-template-columns:repeat(4,1fr);
-
 gap:24px;
-
 }
 
 .gallery-card{
-
 background:#fff;
-
 border-radius:18px;
-
 overflow:hidden;
-
 box-shadow:
 0 6px 18px rgba(0,0,0,.05);
-
 transition:
 transform .25s,
 box-shadow .25s;
-
 }
 
 .gallery-card:hover{
-
 transform:translateY(-4px);
-
 box-shadow:
 0 14px 28px rgba(0,0,0,.08);
-
 }
 
 .gallery-img{
-
 width:100%;
-
 aspect-ratio:4/3;
-
 object-fit:cover;
-
 cursor:pointer;
-
 }
 
 .gallery-card p{
-
 text-align:center;
-
 padding:14px;
-
 font-size:.95rem;
-
 }
 
 
@@ -1032,81 +713,51 @@ Parking
 =================================== */
 
 .parking-lead{
-
 text-align:center;
-
 font-size:1.15rem;
-
 color:#4c86c6;
-
 font-weight:600;
-
 margin-bottom:30px;
-
 }
 
 .parking-grid{
-
 display:grid;
-
 grid-template-columns:repeat(2,1fr);
-
 gap:30px;
-
 }
 
 .parking-card{
-
 background:#fff;
-
 border-radius:18px;
-
 overflow:hidden;
-
 box-shadow:
 0 8px 22px rgba(0,0,0,.05);
-
 transition:
 transform .25s,
 box-shadow .25s;
-
 }
 
 .parking-card:hover{
-
 transform:translateY(-4px);
-
 box-shadow:
 0 14px 30px rgba(0,0,0,.08);
-
 }
 
 .parking-card img{
-
 width:100%;
-
 aspect-ratio:16/10;
-
 object-fit:cover;
-
 }
 
 .parking-card h3{
-
 text-align:center;
-
 color:#4c86c6;
-
 margin:18px 0 8px;
-
 }
 
 .parking-card p{
-
 text-align:center;
-
 padding-bottom:22px;
-
 }
 
 /* ===================================
@@ -1114,34 +765,29 @@ Information
 =================================== */
 
 .info-grid{
-
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:40px;
-
-align-items:start;
-
+align-items:stretch;
 }
 
 .info-card{
-
 background:#fff;
-
 border-radius:20px;
-
 padding:34px;
-
 box-shadow:
 0 8px 24px rgba(0,0,0,.05);
 
+display:flex;
+flex-direction:column;
+}
+
+.info-right{
+justify-content:space-between;
 }
 
 .info-card img{
-
 width:100%;
-
 border-radius:18px;
 }
 
@@ -1150,42 +796,27 @@ Schedule
 =================================== */
 
 .schedule-table{
-
 width:100%;
-
 border-collapse:collapse;
-
 }
 
 .schedule-table th,
 .schedule-table td{
-
 border:1px solid #dfe7ef;
-
 padding:14px;
-
 text-align:center;
-
 }
 
 .schedule-table th{
-
 background:#edf5fd;
-
 color:#4c86c6;
-
 font-weight:600;
-
 }
 
 .schedule-note{
-
 margin-top:18px;
-
 text-align:center;
-
 color:#666;
-
 }
 
 /* ===================================
@@ -1193,73 +824,47 @@ Calendar
 =================================== */
 
 .calendar-divider{
-
 margin:28px 0;
-
 border:none;
-
 border-top:1px solid #e5edf5;
-
 }
 
 .calendar-title{
-
-text-align:center;
-
 font-family:"Zen Old Mincho",serif;
-
+font-size:2rem;
+font-weight:700;
 color:#4c86c6;
-
-font-size:1.3rem;
-
-margin-bottom:18px;
-
+text-align:center;
+margin:30px 0 22px;
+line-height:1.4;
 }
 
 .calendar-thumbnail{
-
 display:block;
-
-width:34%;
-
-min-width:180px;
-
-max-width:220px;
-
+width:58%;
+min-width:260px;
+max-width:340px;
 margin:0 auto;
-
 border-radius:0 !important;
-
 box-shadow:
 0 10px 26px rgba(0,0,0,.12);
-
 cursor:pointer;
-
 transition:
 transform .25s,
 box-shadow .25s;
-
 }
 
 .calendar-thumbnail:hover{
-
 transform:scale(1.03);
-
 box-shadow:
 0 18px 36px rgba(0,0,0,.18);
-
 }
 
 .calendar-note{
-
 margin-top:14px;
-
 text-align:center;
-
 font-size:.85rem;
-
 color:#666;
-
 }
 
 /* ===================================
@@ -1267,17 +872,12 @@ Access
 =================================== */
 
 .access-button{
-
 margin-top:26px;
-
 text-align:center;
-
 }
 
 .access-button .btn-primary{
-
 min-width:240px;
-
 }
 
 
@@ -1286,41 +886,27 @@ Facility
 =================================== */
 
 .facility-box{
-
 background:#fff;
-
 border-radius:20px;
-
 padding:36px;
-
 box-shadow:
 0 8px 24px rgba(0,0,0,.05);
-
 }
 
 .facility-box h3{
-
 color:#4c86c6;
-
 font-size:1.15rem;
-
 margin-top:28px;
 margin-bottom:12px;
-
 }
 
 .facility-box h3:first-child{
-
 margin-top:0;
-
 }
 
 .facility-box p{
-
 line-height:2;
-
 color:#555;
-
 }
 
 /* ===================================
@@ -1328,55 +914,35 @@ Footer
 =================================== */
 
 .footer{
-
 background:#4c86c6;
-
 color:#fff;
-
 text-align:center;
-
 padding:56px 20px;
-
 }
 
 .footer h3{
-
 font-family:"Zen Old Mincho",serif;
-
 font-size:1.5rem;
-
 margin-bottom:18px;
-
 }
 
 .footer p{
-
 line-height:1.9;
-
 }
 
 .footer a{
-
 color:#fff;
-
 text-decoration:none;
-
 }
 
 .footer a[href^="tel"]{
-
 color:#fff !important;
-
 }
 
 .copyright{
-
 margin-top:24px;
-
 opacity:.8;
-
 font-size:.85rem;
-
 }
 
 /* ===================================
@@ -1384,23 +950,16 @@ Smartphone Footer
 =================================== */
 
 .sp-footer{
-
 display:none;
-
 }
 
 .sp-footer a{
-
 color:#fff;
-
 text-decoration:none;
-
 }
 
 .sp-footer a[href^="tel"]{
-
 color:#fff !important;
-
 }
 
 /* ===================================
@@ -1408,55 +967,36 @@ Lightbox
 =================================== */
 
 .lightbox{
-
 position:fixed;
-
 inset:0;
-
 display:flex;
-
 align-items:center;
 justify-content:center;
-
 background:rgba(0,0,0,.82);
-
 opacity:0;
-
 visibility:hidden;
-
 transition:opacity .35s ease;
-
 z-index:99999;
-
 }
 
 .lightbox.show{
-
 opacity:1;
-
 visibility:visible;
-
 pointer-events:auto;
-
 }
 
 #lightbox-img{
-
 max-width:92%;
 max-height:92%;
-
 border-radius:0;
-
 transform:scale(.85);
 opacity:0;
-
 transition:
 transform .28s ease-out,
 opacity .28s ease-out;
 }
 
 .lightbox.show #lightbox-img{
-
 transform:scale(1);
 opacity:1;
 }
@@ -1466,27 +1006,18 @@ Gallery Hover
 =================================== */
 
 .gallery-img{
-
 cursor:pointer;
-
-transition:
-transform .25s,
+transition:transform .25s,
 opacity .25s;
-
 }
 
 .gallery-img:hover{
-
 transform:none;
-
 opacity:.96;
-
 }
 
 .calendar-thumbnail{
-
 cursor:pointer;
-
 }
 
 /* -----------------------------
@@ -1494,12 +1025,8 @@ Animation
 ----------------------------- */
 
 .header.scrolled{
-
 background:rgba(255,255,255,.96);
-
-box-shadow:
-0 6px 18px rgba(0,0,0,.08);
-
+box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
 .section,
@@ -1507,39 +1034,25 @@ box-shadow:
 .gallery-card,
 .parking-card,
 .info-card{
-
 opacity:1;
-
 transform:none;
-
 transition:
-
 opacity .6s ease,
-
 transform .6s ease;
-
 }
 
 .fade-in{
-
 opacity:1;
-
 transform:none;
-
 }
 
 img{
-
 opacity:0;
-
 transition:opacity .4s ease;
-
 }
 
 img.loaded{
-
 opacity:1;
-
 }
 
 /* ===================================
@@ -1553,46 +1066,32 @@ Header
 ----------------------------- */
 
 .header .container{
-
 height:52px;
-
 width:94%;
-
 }
 
 .logo span{
-
 font-size:1.2rem;
-
 }
 
 .logo img{
-
 width:24px;
 height:24px;
-
 }
 
 .line-btn{
-
 width:36px;
 height:36px;
-
 margin-left:auto;
 margin-right:12px;
-
 }
 
 .line-btn i{
-
 font-size:1.15rem;
-
 }
 
 .hamburger{
-
 display:block;
-
 }
 
 /* -----------------------------
@@ -1600,97 +1099,57 @@ Navigation
 ----------------------------- */
 
 .nav{
-
 display:flex;
-
 flex-direction:column;
-
 position:fixed;
-
 top:52px;
 right:0;
-
 width:82%;
 max-width:360px;
-
 height:calc(100vh - 52px);
-
 background:#fff;
-
 transform:translateX(100%);
-
 transition:
 transform .35s cubic-bezier(.22,.61,.36,1);
-
-box-shadow:
--10px 0 30px rgba(0,0,0,.15);
-
+box-shadow:-10px 0 30px rgba(0,0,0,.15);
 overflow-y:auto;
-
 z-index:9999;
-
 }
 
 .nav.active{
-
 transform:translateX(0);
-
 }
 
 .nav a{
-
 display:flex;
-
 align-items:center;
-
 gap:12px;
-
 height:auto;
-
 padding:16px 22px;
-
 border-bottom:1px solid #edf2f7;
-
 font-size:1rem;
-
 }
 
 .nav i{
-
 display:block;
-
 width:22px;
-
 text-align:center;
-
 color:#4c86c6;
-
 }
 
 .nav-overlay{
-
 position:fixed;
-
 inset:0;
-
 background:rgba(0,0,0,.35);
-
 opacity:0;
-
 visibility:hidden;
-
 transition:.3s;
-
 z-index:9998;
-
 }
 
 .nav-overlay.active{
-
 opacity:1;
-
 visibility:visible;
-
 }
 
 /* -----------------------------
@@ -1698,63 +1157,41 @@ Hero
 ----------------------------- */
 
 .hero{
-
 margin-top:60px;
-
 }
 
 .hero-image{
-
 height:52vh;
-
 min-height:320px;
-
 }
 
 .hero-content{
-
 left:6%;
-
 right:6%;
-
 bottom:9%;
-
 }
 
 .hero-en{
-
 font-size:.75rem;
-
 }
 
 .hero-clinic{
-
 font-size:1.8rem;
-
 }
 
 .hero-copy{
-
 font-size:1.05rem;
-
 line-height:1.75;
-
 }
 
 .btn-primary{
-
 width:100%;
-
 max-width:260px;
-
 justify-content:center;
-
 }
 
 .hero-reserve-note{
-
 font-size:.78rem;
-
 }
 
 /* -----------------------------
@@ -1762,51 +1199,34 @@ Section
 ----------------------------- */
 
 .section{
-
 padding:60px 0;
-
 }
 
 .feature-grid{
-
 grid-template-columns:repeat(3,1fr);
-
 gap:12px;
-
 }
 
 .medical-grid{
-
 grid-template-columns:repeat(2,1fr);
-
 }
 
 .director-wrap{
-
 grid-template-columns:1fr;
-
 gap:30px;
-
 }
 
 .gallery-grid{
-
 grid-template-columns:repeat(2,1fr);
-
 gap:16px;
-
 }
 
 .parking-grid{
-
 grid-template-columns:1fr;
-
 }
 
 .info-grid{
-
 grid-template-columns:1fr;
-
 }
 
 /* -----------------------------
@@ -1815,21 +1235,14 @@ Schedule
 
 .schedule-table th,
 .schedule-table td{
-
 font-size:.9rem;
-
 padding:8px 5px;
-
 }
 
 .calendar-thumbnail{
-
 width:70%;
-
 min-width:0;
-
 max-width:280px;
-
 }
 
 /* -----------------------------
@@ -1837,72 +1250,45 @@ Fixed Footer
 ----------------------------- */
 
 body{
-
 padding-bottom:72px;
-
 }
 
 .sp-footer{
-
 display:flex;
-
 position:fixed;
-
 left:0;
 bottom:0;
-
 width:100%;
-
 height:72px;
-
 background:#4c86c6;
-
 z-index:9999;
-
 }
 
 .sp-footer a{
-
 flex:1;
-
 display:flex;
-
 flex-direction:column;
-
 align-items:center;
-
 justify-content:center;
-
 gap:4px;
-
 color:#fff;
-
 border-right:1px solid rgba(255,255,255,.2);
-
 }
 
 .sp-footer a:last-child{
-
 border-right:none;
-
 }
 
 .sp-footer i{
-
 font-size:1.2rem;
-
 }
 
 .sp-footer span{
-
 font-size:.8rem;
-
 }
 
 .back-to-top{
-
 display:none;
-
 }
 }
 
