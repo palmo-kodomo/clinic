@@ -1127,7 +1127,7 @@ display:flex;
 align-items:center;
 justify-content:flex-start;
 width:100%;
-padding:12px 20px;
+padding:7px 20px;
 gap:16px;
 font-size:1.05rem;
 font-weight:500;
@@ -1139,7 +1139,8 @@ box-sizing:border-box;
 
 .nav i{
 display:block !important;
-width:22px;
+width:18px;
+font-size:.95rem;
 text-align:center;
 color:#4c86c6;
 flex-shrink:0;
