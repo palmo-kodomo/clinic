@@ -118,12 +118,10 @@ color:#333;
 transition:
 color .25s,
 transform .25s;
-justify-content:flex-start;
 }
 
 .nav a:hover{
 color:#4c86c6;
-
 }
 
 .nav a::after{
@@ -147,6 +145,7 @@ width:100%;
 display:none !important;
 }
 
+
 /* ===================================
 LINE Button
 =================================== */
@@ -161,8 +160,8 @@ flex-shrink:0;
 }
 
 .line-btn img{
-width:36px;
-height:36px;
+width:30px;
+height:30px;
 display:block;
 border-radius:0;
 box-shadow:none;
@@ -230,9 +229,7 @@ opacity:0;
 .hamburger.active span:nth-child(3){
 top:15px;
 transform:rotate(-45deg);
-
 }
-
 
 /* ===================================
 Back To Top
@@ -254,8 +251,7 @@ background:rgba(255,255,255,.92);
 backdrop-filter:blur(12px);
 -webkit-backdrop-filter:blur(12px);
 border:1px solid rgba(76,134,198,.15);
-box-shadow:
-0 8px 24px rgba(0,0,0,.12);
+box-shadow:0 8px 24px rgba(0,0,0,.12);
 color:#4c86c6;
 opacity:0;
 visibility:hidden;
@@ -278,8 +274,7 @@ transform:translateY(0);
 background:#4c86c6;
 color:#fff;
 transform:translateY(-3px);
-box-shadow:
-0 14px 32px rgba(76,134,198,.35);
+box-shadow:0 14px 32px rgba(76,134,198,.35);
 }
 
 .back-to-top i{
@@ -292,6 +287,7 @@ font-size:.65rem;
 font-weight:600;
 letter-spacing:.08em;
 }
+
 
 /* ===================================
 Hero
@@ -350,8 +346,19 @@ line-height:1.85;
 margin-bottom:28px;
 }
 
+.hero-buttons{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+}
+
+.hero-buttons .btn-primary{
+margin-bottom:8px;
+}
+
 .hero-reserve-note{
 margin-top:12px;
+padding-left:4px;
 font-size:.88rem;
 color:#fff;
 text-shadow:0 1px 3px rgba(0,0,0,.35);
@@ -364,27 +371,34 @@ Primary Button
 .btn-primary{
 display:inline-flex;
 align-items:center;
+justify-content:center;
 gap:10px;
 padding:10px 28px;
 min-width:180px;
-justify-content:center;
+
 font-family:"Zen Old Mincho",serif;
 font-size:1.05rem;
 font-weight:400;
+
 color:#fff;
+
 border-radius:14px;
-background:
-linear-gradient(
+
+background:linear-gradient(
 180deg,
 rgba(126,179,242,.88),
 rgba(76,134,198,.88)
 );
+
 border:1px solid rgba(255,255,255,.30);
+
 backdrop-filter:blur(8px);
 -webkit-backdrop-filter:blur(8px);
+
 box-shadow:
 0 8px 18px rgba(76,134,198,.20),
 inset 0 1px 1px rgba(255,255,255,.35);
+
 transition:
 transform .25s,
 box-shadow .25s,
@@ -394,37 +408,43 @@ background .25s;
 .btn-primary:hover{
 transform:translateY(-2px);
 color:#fff;
+
 box-shadow:
 0 14px 28px rgba(76,134,198,.35),
 inset 0 1px 1px rgba(255,255,255,.35);
 }
-
 
 /* ===================================
 Arrow Circle
 =================================== */
 
 .arrow-circle{
-
 width:34px;
 height:34px;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 margin-left:6px;
+
 border-radius:50%;
+
 background:rgba(255,255,255,.18);
+
 border:1px solid rgba(255,255,255,.45);
+
 backdrop-filter:blur(6px);
 -webkit-backdrop-filter:blur(6px);
+
 transition:
 transform .25s,
 background .25s;
 }
 
 .arrow-circle i{
-color:#fff;
 font-size:.75rem;
+color:#fff;
 transition:transform .25s;
 }
 
@@ -437,23 +457,6 @@ background:rgba(255,255,255,.26);
 transform:translateX(1px);
 }
 
-/* ===================================
-Hero Buttons
-=================================== */
-
-.hero-buttons{
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-}
-
-.hero-buttons .btn-primary{
-margin-bottom:8px;
-}
-
-.hero-reserve-note{
-padding-left:4px;
-}
 
 /* ===================================
 Header Animation
@@ -478,12 +481,15 @@ Desktop Only
 =================================== */
 
 @media (min-width:769px){
+
 .nav i{
 display:none !important;
 }
+
 .hamburger{
 display:none;
 }
+
 }
 
 /* ===================================
@@ -491,9 +497,11 @@ Mobile Hidden
 =================================== */
 
 @media (max-width:768px){
+
 .back-to-top{
 display:none;
 }
+
 }
 
 /* ===================================
@@ -558,6 +566,7 @@ font-size:1.15rem;
 margin-bottom:12px;
 }
 
+
 /* ===================================
 Feature
 =================================== */
@@ -614,8 +623,7 @@ padding:18px;
 text-align:center;
 box-shadow:
 0 4px 12px rgba(0,0,0,.04);
-transition:
-transform .25s;
+transition:transform .25s;
 }
 
 .medical-grid div:hover{
@@ -627,6 +635,7 @@ margin-top:24px;
 text-align:center;
 color:#666;
 }
+
 
 /* ===================================
 Director
@@ -778,7 +787,6 @@ border-radius:20px;
 padding:34px;
 box-shadow:
 0 8px 24px rgba(0,0,0,.05);
-
 display:flex;
 flex-direction:column;
 }
@@ -789,7 +797,7 @@ justify-content:space-between;
 
 .info-card img{
 width:100%;
-border-radius:18px;
+border-radius:0;
 }
 
 /* ===================================
@@ -846,7 +854,7 @@ width:58%;
 min-width:260px;
 max-width:340px;
 margin:0 auto;
-border-radius:0 !important;
+border-radius:0;
 box-shadow:
 0 10px 26px rgba(0,0,0,.12);
 cursor:pointer;
@@ -871,6 +879,10 @@ color:#666;
 /* ===================================
 Access
 =================================== */
+
+.access-map{
+border-radius:0;
+}
 
 .access-button{
 margin-top:26px;
@@ -976,7 +988,7 @@ justify-content:center;
 background:rgba(0,0,0,.82);
 opacity:0;
 visibility:hidden;
-transition:opacity .35s ease;
+transition:opacity .25s ease;
 z-index:99999;
 }
 
@@ -990,11 +1002,11 @@ pointer-events:auto;
 max-width:92%;
 max-height:92%;
 border-radius:0;
-transform:scale(.85);
+transform:scale(.9);
 opacity:0;
 transition:
-transform .28s ease-out,
-opacity .28s ease-out;
+transform .2s ease,
+opacity .2s ease;
 }
 
 .lightbox.show #lightbox-img{
@@ -1008,12 +1020,11 @@ Gallery Hover
 
 .gallery-img{
 cursor:pointer;
-transition:transform .25s,
+transition:
 opacity .25s;
 }
 
 .gallery-img:hover{
-transform:none;
 opacity:.96;
 }
 
@@ -1021,9 +1032,9 @@ opacity:.96;
 cursor:pointer;
 }
 
-/* -----------------------------
+/* ===================================
 Animation
------------------------------ */
+=================================== */
 
 .header.scrolled{
 background:rgba(255,255,255,.96);
@@ -1056,6 +1067,7 @@ img.loaded{
 opacity:1;
 }
 
+
 /* ===================================
 Mobile
 =================================== */
@@ -1071,24 +1083,25 @@ height:60px;
 width:94%;
 }
 
-.logo span{
-font-size:1.2rem;
-}
-
 .logo img{
 width:24px;
 height:24px;
 }
 
-.line-btn{
-width:36px;
-height:36px;
-margin-left:auto;
-margin-right:12px;
+.logo span{
+font-size:1.2rem;
 }
 
-.line-btn i{
-font-size:1.15rem;
+.line-btn{
+width:32px;
+height:32px;
+margin-left:auto;
+margin-right:10px;
+}
+
+.line-btn img{
+width:28px;
+height:28px;
 }
 
 .hamburger{
@@ -1101,21 +1114,28 @@ Navigation
 ----------------------------- */
 
 .nav{
-display:flex;
-flex-direction:column;
-align-items:stretch;
 position:fixed;
 top:60px;
 right:0;
-width:82%;
-max-width:360px;
-height:calc(100vh - 60px);
+
+display:flex;
+flex-direction:column;
+align-items:stretch;
+
+width:320px;
+max-width:86vw;
+height:calc(100dvh - 60px);
+
 background:#fff;
+
+box-shadow:-10px 0 30px rgba(0,0,0,.15);
+
 transform:translateX(100%);
 transition:transform .35s cubic-bezier(.22,.61,.36,1);
-box-shadow:-10px 0 30px rgba(0,0,0,.15);
+
 overflow-y:auto;
 -webkit-overflow-scrolling:touch;
+
 z-index:9999;
 }
 
@@ -1127,33 +1147,48 @@ transform:translateX(0);
 display:flex;
 align-items:center;
 justify-content:flex-start;
+
 width:100%;
-padding:7px 20px;
-gap:16px;
-font-size:1.05rem;
+
+padding:9px 18px;
+
+gap:14px;
+
+font-size:1rem;
 font-weight:500;
-line-height:1.4;
+line-height:1.45;
+
 text-align:left;
+
 border-bottom:1px solid #edf2f7;
+
 box-sizing:border-box;
 }
 
 .nav i{
 display:block !important;
+
 width:18px;
+min-width:18px;
+
 font-size:.95rem;
+
 text-align:center;
+
 color:#4c86c6;
-flex-shrink:0;
 }
 
 .nav-overlay{
 position:fixed;
 inset:0;
+
 background:rgba(0,0,0,.35);
+
 opacity:0;
 visibility:hidden;
+
 transition:.3s;
+
 z-index:9998;
 }
 
@@ -1205,7 +1240,7 @@ font-size:.78rem;
 }
 
 /* -----------------------------
-Section
+Layout
 ----------------------------- */
 
 .section{
@@ -1250,13 +1285,13 @@ padding:8px 5px;
 }
 
 .calendar-thumbnail{
-width:70%;
+width:72%;
+max-width:300px;
 min-width:0;
-max-width:280px;
 }
 
 /* -----------------------------
-Fixed Footer
+Smartphone Footer
 ----------------------------- */
 
 body{
@@ -1265,23 +1300,31 @@ padding-bottom:72px;
 
 .sp-footer{
 display:flex;
+
 position:fixed;
 left:0;
 bottom:0;
+
 width:100%;
 height:72px;
+
 background:#4c86c6;
+
 z-index:9999;
 }
 
 .sp-footer a{
 flex:1;
+
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
+
 gap:4px;
+
 color:#fff;
+
 border-right:1px solid rgba(255,255,255,.2);
 }
 
@@ -1300,12 +1343,12 @@ font-size:.8rem;
 .back-to-top{
 display:none;
 }
+
 }
 
-/* -----------------------------
-PC / SP Menu
------------------------------ */
-
+/* ===================================
+PC / SP
+=================================== */
 
 .sp-only{
 display:none !important;
