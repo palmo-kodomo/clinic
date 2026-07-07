@@ -1115,6 +1115,7 @@ transform:translateX(100%);
 transition:transform .35s cubic-bezier(.22,.61,.36,1);
 box-shadow:-10px 0 30px rgba(0,0,0,.15);
 overflow-y:auto;
+-webkit-overflow-scrolling:touch;
 z-index:9999;
 }
 
@@ -1305,22 +1306,23 @@ display:none;
 PC / SP Menu
 ----------------------------- */
 
+
 .sp-only{
-display:none;
+display:none !important;
 }
 
 .pc-only{
-display:flex;
+display:flex !important;
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 .sp-only{
-display:flex;
+display:flex !important;
 }
 
 .pc-only{
-display:none;
+display:none !important;
 }
 
 }
