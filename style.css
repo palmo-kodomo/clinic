@@ -146,7 +146,7 @@ width:100%;
 }
 
 .nav i{
-display:none;
+display:none !important;
 }
 
 /* ===================================
@@ -480,6 +480,9 @@ Desktop Only
 =================================== */
 
 @media (min-width:769px){
+.nav i{
+display:none !important;
+}
 .hamburger{
 display:none;
 }
@@ -1131,10 +1134,11 @@ font-size:1rem;
 }
 
 .nav i{
-display:block;
+display:block !important;
 width:22px;
 text-align:center;
 color:#4c86c6;
+flex-shrink:0;
 }
 
 .nav-overlay{
@@ -1292,3 +1296,26 @@ display:none;
 }
 }
 
+/* -----------------------------
+PC / SP Menu
+----------------------------- */
+
+.sp-only{
+display:none;
+}
+
+.pc-only{
+display:flex;
+}
+
+@media(max-width:768px){
+
+.sp-only{
+display:flex;
+}
+
+.pc-only{
+display:none;
+}
+
+}
