@@ -1126,11 +1126,21 @@ transform:translateX(0);
 .nav a{
 display:flex;
 align-items:center;
-gap:12px;
-height:auto;
-padding:16px 22px;
-border-bottom:1px solid #edf2f7;
-font-size:1rem;
+justify-content:flex-start;
+gap:16px;
+padding:13px 28px;
+font-size:1.05rem;
+position:relative;
+}
+
+.nav a::after{
+content:"";
+position:absolute;
+left:28px;
+right:28px;
+bottom:0;
+height:1px;
+background:#edf2f7;
 }
 
 .nav i{
