@@ -493,18 +493,6 @@ display:none;
 }
 
 /* ===================================
-Mobile Hidden
-=================================== */
-
-@media (max-width:768px){
-
-.back-to-top{
-display:none;
-}
-
-}
-
-/* ===================================
 Common Section
 =================================== */
 
@@ -539,7 +527,7 @@ News
 =================================== */
 
 #news{
-scroll-margin-top:80px;
+scroll-margin-top:20px;
 }
 
 .news-box{
@@ -1340,8 +1328,8 @@ font-size:1.2rem;
 font-size:.8rem;
 }
 
-.back-to-top{
-display:none;
+#schedule{
+scroll-margin-top:80px
 }
 
 }
