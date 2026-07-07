@@ -1165,10 +1165,10 @@ position:fixed;
 top:60px;
 right:-100%;
 
-width:82%;
-max-width:330px;
+width:78%;
+max-width:300px;
 
-height:calc(100vh - 60px);
+height:calc(100vh - 132px);
 
 display:flex;
 flex-direction:column;
