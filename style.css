@@ -1104,6 +1104,10 @@ top:60px;
 right:0;
 bottom:72px;
 
+left:auto;
+margin-left:0;
+gap:0;
+
 display:flex;
 flex-direction:column;
 align-items:stretch;
