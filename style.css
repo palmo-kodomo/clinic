@@ -1095,6 +1095,7 @@ font-size:1.15rem;
 
 .hamburger{
 display:block;
+margin-top:4px;
 }
 
 /* -----------------------------
@@ -1105,11 +1106,11 @@ Navigation
 display:flex;
 flex-direction:column;
 position:fixed;
-top:52px;
+top:60px;
 right:0;
 width:82%;
 max-width:360px;
-height:calc(100vh - 52px);
+height:calc(100vh - 60px);
 background:#fff;
 transform:translateX(100%);
 transition:
@@ -1128,19 +1129,10 @@ display:flex;
 align-items:center;
 justify-content:flex-start;
 gap:16px;
-padding:13px 28px;
+padding:13px 18px;
 font-size:1.05rem;
-position:relative;
-}
-
-.nav a::after{
-content:"";
-position:absolute;
-left:28px;
-right:28px;
-bottom:0;
-height:1px;
-background:#edf2f7;
+text-align:left;
+border-bottom:1px solid #edf2f7
 }
 
 .nav i{
