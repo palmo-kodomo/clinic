@@ -1051,31 +1051,34 @@ img.loaded{
 opacity:1;
 }
 
-
 /* ===================================
-Mobile
+Mobile Header
 =================================== */
 
 @media (max-width:768px){
 
-
-/* ===================================
-Header
-=================================== */
-
 .header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
 height:60px;
+z-index:9999;
 }
 
 .header .container{
-width:94%;
 height:60px;
+width:94%;
 display:flex;
 align-items:center;
 justify-content:space-between;
+gap:10px;
 }
 
 .logo{
+display:flex;
+align-items:center;
+gap:8px;
 flex:1;
 min-width:0;
 }
@@ -1086,21 +1089,22 @@ height:24px;
 }
 
 .logo span{
+font-family:"Zen Old Mincho",serif;
 font-size:1.18rem;
+font-weight:700;
+color:#4c86c6;
 white-space:nowrap;
+line-height:1;
 }
 
 .line-btn{
 display:flex;
 align-items:center;
 justify-content:center;
-
 width:34px;
 height:34px;
-
 margin-left:auto;
-margin-right:12px;
-
+margin-right:10px;
 flex-shrink:0;
 }
 
@@ -1110,52 +1114,56 @@ height:30px;
 }
 
 .hamburger{
-display:flex;
-align-items:center;
-justify-content:center;
-
-width:36px;
-height:36px;
-
+display:block;
+position:relative;
+width:34px;
+height:34px;
 padding:0;
 margin:0;
-
 border:none;
 background:none;
-
-flex-shrink:0;
-
 cursor:pointer;
+flex-shrink:0;
 }
 
 .hamburger span{
-left:4px;
+position:absolute;
+left:3px;
 width:28px;
 height:3px;
+border-radius:99px;
+background:#4c86c6;
+transition:.3s;
 }
 
 .hamburger span:nth-child(1){
-top:8px;
+top:7px;
 }
 
 .hamburger span:nth-child(2){
-top:16px;
+top:15px;
 }
 
 .hamburger span:nth-child(3){
-top:24px;
+top:23px;
 }
 
 .hamburger.active span:nth-child(1){
-top:16px;
+top:15px;
+transform:rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+opacity:0;
 }
 
 .hamburger.active span:nth-child(3){
-top:16px;
+top:15px;
+transform:rotate(-45deg);
 }
 
 /* ===================================
-Navigation
+Mobile Navigation
 =================================== */
 
 .nav{
@@ -1163,26 +1171,28 @@ Navigation
 position:fixed;
 
 top:60px;
-right:-100%;
+right:-320px;
 
-width:78%;
-max-width:300px;
+width:300px;
+max-width:80vw;
 
-height:calc(100vh - 60px);
-padding-bottom:90px;
+height:calc(100dvh - 60px - 72px);
 
 display:flex;
 flex-direction:column;
-align-items:stretch;
 
 background:#fff;
 
-box-shadow:-8px 0 24px rgba(0,0,0,.15);
+box-shadow:-8px 0 24px rgba(0,0,0,.12);
+
+transition:right .28s ease;
 
 overflow-y:auto;
+overflow-x:hidden;
+
 -webkit-overflow-scrolling:touch;
 
-transition:right .35s ease;
+padding-bottom:8px;
 
 z-index:9998;
 
@@ -1199,18 +1209,24 @@ right:0;
 display:flex;
 align-items:center;
 
-height:56px;
+height:52px;
+min-height:52px;
+
 padding:0 18px;
 
 gap:12px;
 
-font-size:1rem;
+font-family:"LINE Seed JP","Noto Sans JP",sans-serif;
+font-size:.95rem;
 font-weight:500;
+
 line-height:1;
+
+color:#333;
 
 border-bottom:1px solid #edf2f7;
 
-flex:none;
+flex-shrink:0;
 
 }
 
@@ -1220,19 +1236,25 @@ border-bottom:none;
 
 }
 
+.nav a::after{
+
+display:none;
+
+}
+
 .nav i{
 
 display:flex !important;
 
-width:20px;
-
+align-items:center;
 justify-content:center;
 
+width:18px;
+min-width:18px;
+
+font-size:.95rem;
+
 color:#4c86c6;
-
-font-size:1rem;
-
-flex-shrink:0;
 
 }
 
@@ -1245,12 +1267,12 @@ left:0;
 right:0;
 bottom:72px;
 
-background:rgba(0,0,0,.35);
+background:rgba(0,0,0,.28);
 
 opacity:0;
 visibility:hidden;
 
-transition:.3s;
+transition:.25s;
 
 z-index:9997;
 
@@ -1263,9 +1285,9 @@ visibility:visible;
 
 }
 
-/* -----------------------------
-Hero
------------------------------ */
+/* ===================================
+Mobile Hero
+=================================== */
 
 .hero{
 margin-top:60px;
@@ -1274,25 +1296,35 @@ margin-top:60px;
 .hero-image{
 height:52vh;
 min-height:320px;
+object-fit:cover;
 }
 
 .hero-content{
 left:6%;
 right:6%;
-bottom:9%;
+bottom:8%;
+max-width:none;
 }
 
 .hero-en{
 font-size:.75rem;
+letter-spacing:2px;
 }
 
 .hero-clinic{
-font-size:1.8rem;
+font-size:1.9rem;
+line-height:1.35;
+margin-bottom:16px;
 }
 
 .hero-copy{
 font-size:1.05rem;
 line-height:1.75;
+margin-bottom:22px;
+}
+
+.hero-buttons{
+width:100%;
 }
 
 .btn-primary{
@@ -1302,12 +1334,14 @@ justify-content:center;
 }
 
 .hero-reserve-note{
+margin-top:10px;
 font-size:.78rem;
+line-height:1.5;
 }
 
-/* -----------------------------
+/* ===================================
 Layout
------------------------------ */
+=================================== */
 
 .section{
 padding:60px 0;
@@ -1324,7 +1358,7 @@ grid-template-columns:repeat(2,1fr);
 
 .director-wrap{
 grid-template-columns:1fr;
-gap:30px;
+gap:28px;
 }
 
 .gallery-grid{
@@ -1338,27 +1372,28 @@ grid-template-columns:1fr;
 
 .info-grid{
 grid-template-columns:1fr;
+gap:28px;
 }
 
-/* -----------------------------
-Schedule
------------------------------ */
+/* ===================================
+Back To Top
+=================================== */
 
-.schedule-table th,
-.schedule-table td{
-font-size:.9rem;
-padding:8px 5px;
+.back-to-top{
+right:18px;
+bottom:90px;
+width:54px;
+height:54px;
+z-index:9998;
 }
 
-.calendar-thumbnail{
-width:72%;
-max-width:300px;
-min-width:0;
+.back-to-top span{
+font-size:.62rem;
 }
 
-/* -----------------------------
+/* ===================================
 Smartphone Footer
------------------------------ */
+=================================== */
 
 body{
 padding-bottom:72px;
@@ -1366,31 +1401,23 @@ padding-bottom:72px;
 
 .sp-footer{
 display:flex;
-
 position:fixed;
 left:0;
 bottom:0;
-
 width:100%;
 height:72px;
-
 background:#4c86c6;
-
 z-index:9999;
 }
 
 .sp-footer a{
 flex:1;
-
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-
 gap:4px;
-
 color:#fff;
-
 border-right:1px solid rgba(255,255,255,.2);
 }
 
@@ -1407,9 +1434,27 @@ font-size:.8rem;
 }
 
 #schedule{
-scroll-margin-top:70px
+scroll-margin-top:72px;
 }
 
+#access{
+scroll-margin-top:72px;
+}
+
+/* ===================================
+Schedule
+=================================== */
+
+.schedule-table th,
+.schedule-table td{
+font-size:.9rem;
+padding:8px 5px;
+}
+
+.calendar-thumbnail{
+width:72%;
+max-width:300px;
+min-width:0;
 }
 
 /* ===================================
@@ -1417,25 +1462,11 @@ PC / SP
 =================================== */
 
 .sp-only{
-display:none !important;
-}
-
-.pc-only{
-display:flex !important;
-}
-
-@media (max-width:768px){
-
-.sp-only{
 display:flex !important;
 }
 
 .pc-only{
 display:none !important;
-}
-
-.back-to-top{
-bottom:92px;
 }
 
 }
