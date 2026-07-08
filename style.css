@@ -1166,7 +1166,7 @@ transform:rotate(-45deg);
 Mobile Navigation
 =================================== */
 
-nav{
+.nav{
 position:fixed;
 top:60px;
 right:-100%;
