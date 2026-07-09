@@ -1359,10 +1359,23 @@ grid-template-columns:1fr;
 gap:28px;
 }
 
+.schedule-table{
+table-layout:fixed;
+width:100%;
+}
+
 .schedule-table th,
 .schedule-table td{
-font-size:.9rem;
-padding:8px 5px;
+padding:8px 2px;
+font-size:.85rem;
+}
+
+.schedule-table td:first-child{
+font-size:.75rem;
+line-height:1.4;
+word-break:keep-all;
+white-space:normal;
+width:72px;
 }
 
 .calendar-thumbnail{
@@ -1376,7 +1389,7 @@ scroll-margin-top:72px;
 }
 
 #access{
-scroll-margin-top:72px;
+scroll-margin-top:95px;
 }
 
 /* ===================================
