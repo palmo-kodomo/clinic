@@ -1373,9 +1373,10 @@ text-align:center;
 
 .schedule-table th:first-child,
 .schedule-table td:first-child{
-width:120px;
-white-space:nowrap;
-font-size:1rem;
+width:82px;
+white-space:normal;
+line-height:1.35;
+font-size:.95rem;
 }
 
 .calendar-thumbnail{
