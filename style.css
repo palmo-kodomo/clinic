@@ -1051,9 +1051,19 @@ img.loaded{
 opacity:1;
 }
 
+/* ===================================
+PC / SP
+=================================== */
+
+.pc-only{
+display:inline-flex !important;
+}
+
+.sp-only{
+display:none !important;
+}
 
 @media (max-width:768px){
-
 
 /* ===================================
 Mobile Header
@@ -1441,15 +1451,6 @@ margin:0 auto;
 /* ===================================
 PC / SP
 =================================== */
-
-.pc-only{
-display:inline-flex;
-}
-
-.sp-only{
-display:none;
-
-@media (max-width:768px){
 
 .pc-only{
 display:none !important;
