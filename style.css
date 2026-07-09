@@ -1360,22 +1360,22 @@ gap:28px;
 }
 
 .schedule-table{
-table-layout:fixed;
 width:100%;
+border-collapse:collapse;
+table-layout:auto;
 }
 
 .schedule-table th,
 .schedule-table td{
-padding:8px 2px;
-font-size:.85rem;
+padding:10px 6px;
+font-size:.9rem;
+text-align:center;
+white-space:nowrap;
 }
 
 .schedule-table td:first-child{
-font-size:.75rem;
-line-height:1.4;
-word-break:keep-all;
-white-space:normal;
-width:72px;
+width:90px;
+font-size:.95rem;
 }
 
 .calendar-thumbnail{
