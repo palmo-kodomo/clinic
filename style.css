@@ -1174,7 +1174,8 @@ Mobile Navigation
 position:fixed;
 top:60px;
 right:-100%;
-width:100%;
+width:300px;
+max-width:85vw;
 height:calc(100dvh - 60px);
 display:block;
 background:#fff;
@@ -1440,6 +1441,15 @@ margin:0 auto;
 /* ===================================
 PC / SP
 =================================== */
+
+.pc-only{
+display:inline-flex;
+}
+
+.sp-only{
+display:none;
+
+@media (max-width:768px){
 
 .pc-only{
 display:none !important;
